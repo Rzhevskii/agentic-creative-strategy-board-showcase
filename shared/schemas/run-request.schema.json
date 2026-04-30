@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/agentic-creative-strategy-board/shared/schemas/run-request.schema.json",
+  "title": "RunRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["brief"],
+  "properties": {
+    "brief": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Compiled strategy brief sent to the backend."
+    },
+    "contextUrl": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Optional public URL that gives the agent extra context."
+    },
+    "inputImagePath": {
+      "type": ["string", "null"],
+      "description": "Optional backend-managed path to an uploaded reference image."
+    },
+    "demoMode": {
+      "type": "boolean",
+      "default": false,
+      "description": "Forces deterministic fallback execution when true."
+    }
+  }
+}

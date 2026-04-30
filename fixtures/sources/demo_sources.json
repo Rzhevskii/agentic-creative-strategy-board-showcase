@@ -1,0 +1,7 @@
+[
+  {"sourceId": "src_alpha", "runId": "run_demo_001", "url": "https://alpha.example.com/product", "domain": "alpha.example.com", "title": "Source Alpha", "sourceType": "landing-page", "selected": true, "citationLabel": "S1", "screenshotPath": "docs/assets/placeholder-source-card.svg"},
+  {"sourceId": "src_bravo", "runId": "run_demo_001", "url": "https://bravo.example.com/product", "domain": "bravo.example.com", "title": "Source Bravo", "sourceType": "landing-page", "selected": true, "citationLabel": "S2", "screenshotPath": "docs/assets/placeholder-source-card.svg"},
+  {"sourceId": "src_charlie", "runId": "run_demo_001", "url": "https://charlie.example.com/product", "domain": "charlie.example.com", "title": "Source Charlie", "sourceType": "landing-page", "selected": true, "citationLabel": "S3", "screenshotPath": "docs/assets/placeholder-source-card.svg"},
+  {"sourceId": "src_delta", "runId": "run_demo_001", "url": "https://delta.example.com/product", "domain": "delta.example.com", "title": "Source Delta", "sourceType": "landing-page", "selected": true, "citationLabel": "S4", "screenshotPath": "docs/assets/placeholder-source-card.svg"},
+  {"sourceId": "src_echo", "runId": "run_demo_001", "url": "https://echo.example.com/article", "domain": "echo.example.com", "title": "Source Echo", "sourceType": "article", "selected": true, "citationLabel": "S5", "screenshotPath": null}
+]

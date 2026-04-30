@@ -1,0 +1,15 @@
+{
+  "product": "Agentic creative strategy board for founder-led marketing teams",
+  "users": ["founders", "chiefs of staff", "early operators"],
+  "buyers": ["founders", "operations leads"],
+  "trigger": "The team needs a first serious paid campaign and wants a differentiated creative angle.",
+  "currentAlternative": ["manual swipe-file review", "ad hoc research notes", "manual recap documents"],
+  "benefitsToPreserve": ["low setup burden", "fast onboarding", "easy sharing"],
+  "targetMarkets": ["United States", "United Kingdom"],
+  "successCriteria": [
+    "identify 3-5 recurring creative patterns",
+    "identify at least 1 overused angle",
+    "identify at least 2 differentiated opportunity spaces",
+    "produce one next-test brief"
+  ]
+}

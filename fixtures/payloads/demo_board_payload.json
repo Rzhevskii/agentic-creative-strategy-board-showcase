@@ -1,0 +1,48 @@
+{
+  "sessionId": "ses_demo_001",
+  "runId": "run_demo_001",
+  "mode": "fallback",
+  "input": {
+    "brief": "Agentic creative strategy board for founder-led teams preparing a first serious paid campaign.",
+    "contextUrl": "https://example.com/founder-note-assistant",
+    "inputImagePath": null,
+    "targetNiche": "Creative strategy support for startup operators"
+  },
+  "sources": [
+    {"sourceId": "src_alpha", "title": "Source Alpha", "url": "https://alpha.example.com/product", "domain": "alpha.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S1"},
+    {"sourceId": "src_bravo", "title": "Source Bravo", "url": "https://bravo.example.com/product", "domain": "bravo.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S2"},
+    {"sourceId": "src_charlie", "title": "Source Charlie", "url": "https://charlie.example.com/product", "domain": "charlie.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S3"},
+    {"sourceId": "src_delta", "title": "Source Delta", "url": "https://delta.example.com/product", "domain": "delta.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S4"},
+    {"sourceId": "src_echo", "title": "Source Echo", "url": "https://echo.example.com/article", "domain": "echo.example.com", "screenshotPath": null, "citationLabel": "S5"}
+  ],
+  "patternClusters": [
+    {"clusterId": "cluster_speed", "label": "Fast recap framing", "summary": "The sampled set repeatedly leads with speed and immediate summary language.", "evidenceSourceIds": ["src_alpha", "src_charlie", "src_delta"], "evidenceCount": 3},
+    {"clusterId": "cluster_autopilot", "label": "Autopilot assistant framing", "summary": "Several sources position the product as a meeting autopilot rather than a context-preserving collaborator.", "evidenceSourceIds": ["src_alpha", "src_bravo", "src_delta"], "evidenceCount": 3},
+    {"clusterId": "cluster_trust", "label": "Trust and workflow confidence", "summary": "Reliability and adoption signals are common credibility anchors.", "evidenceSourceIds": ["src_bravo", "src_charlie", "src_echo"], "evidenceCount": 3}
+  ],
+  "overused": [
+    {"label": "Save hours every week", "reason": "Generic time-saved messaging appears repeatedly and no longer differentiates the offer by itself.", "evidenceSourceIds": ["src_alpha", "src_charlie", "src_delta"]}
+  ],
+  "opportunities": [
+    {"label": "Preserve decision context", "rationale": "The category emphasizes automation more than decision continuity after messy conversations.", "differentiationAngle": "Position the product as the bridge from meeting chaos to shared action.", "evidenceSourceIds": ["src_alpha", "src_bravo", "src_echo"]},
+    {"label": "Low-friction adoption for tiny teams", "rationale": "Small teams need speed and trust without an operations rollout project.", "differentiationAngle": "Emphasize startup-native simplicity rather than enterprise-first process.", "evidenceSourceIds": ["src_bravo", "src_delta", "src_echo"]}
+  ],
+  "nextTestBrief": {
+    "audience": "Founders and chiefs of staff at startup teams with heavy meeting volume",
+    "hook": "Your team does not need more AI notes. It needs decisions that survive the meeting.",
+    "angle": "Shift from note automation to preserving context, ownership, and next steps.",
+    "visualDirection": "Editorial collage of chaotic conversations resolving into one shared action board.",
+    "copyDirection": "Operator-focused language that contrasts decision clarity with manual recap chaos.",
+    "whyThisNow": "This test speaks directly to the current manual workaround while preserving speed and low setup burden."
+  },
+  "audioRecap": {
+    "status": "unavailable"
+  },
+  "storyBlocks": [
+    {"blockId": "sb_opening", "type": "narrative_text", "title": "Market pulse", "body": "The sampled market repeats the same promise cluster: fast recap, autopilot assistance, and workflow confidence.", "citationSourceIds": ["src_alpha", "src_bravo", "src_charlie"]},
+    {"blockId": "sb_collage", "type": "source_collage", "title": "What users see first", "items": [{"itemId": "collage_1", "sourceId": "src_alpha", "title": "Source Alpha", "imagePath": "docs/assets/placeholder-source-card.svg", "caption": "Fast recap framing", "citationLabel": "S1"}, {"itemId": "collage_2", "sourceId": "src_bravo", "title": "Source Bravo", "imagePath": "docs/assets/placeholder-source-card.svg", "caption": "Autopilot assistant framing", "citationLabel": "S2"}]},
+    {"blockId": "sb_strategy", "type": "strategy_callout", "title": "Strongest opening", "label": "Differentiate on decision clarity", "body": "The most defensible next test is to focus on what survives the meeting, not just what gets summarized.", "citationSourceIds": ["src_alpha", "src_bravo", "src_echo"]},
+    {"blockId": "sb_generated_image", "type": "generated_image", "title": "Concept frame", "imagePath": "docs/assets/placeholder-concept-frame.svg", "alt": "Editorial concept frame placeholder", "promptSummary": "decision clarity after founder meeting chaos", "generationModel": "mimo-eval-placeholder"},
+    {"blockId": "sb_audio", "type": "audio_clip", "title": "Optional recap placeholder", "audioPath": "docs/assets/placeholder-demo-payload.svg", "transcript": "Optional audio recap placeholder for showcase-only review."}
+  ]
+}
