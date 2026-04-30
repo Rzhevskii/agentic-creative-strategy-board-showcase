@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#111827"/>
+  <rect x="60" y="60" width="1080" height="580" rx="24" fill="#1f2937"/>
+  <text x="100" y="120" font-family="Courier New, monospace" font-size="26" fill="#e5e7eb">event: run.created</text>
+  <text x="100" y="180" font-family="Courier New, monospace" font-size="22" fill="#93c5fd">data: {"status":"queued"}</text>
+  <text x="100" y="270" font-family="Courier New, monospace" font-size="26" fill="#e5e7eb">event: run.stage.completed</text>
+  <text x="100" y="330" font-family="Courier New, monospace" font-size="22" fill="#93c5fd">data: {"stage":"discovery","progress":35}</text>
+  <text x="100" y="420" font-family="Courier New, monospace" font-size="26" fill="#e5e7eb">event: run.completed</text>
+  <text x="100" y="480" font-family="Courier New, monospace" font-size="22" fill="#93c5fd">data: {"status":"completed","boardPayload":{...}}</text>
+</svg>
