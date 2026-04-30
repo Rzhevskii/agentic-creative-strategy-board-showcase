@@ -65,6 +65,8 @@ def main() -> int:
             errors.append(f"missing required file: {rel}")
 
     for path in ROOT.rglob("*"):
+        if ".git" in path.parts:
+            continue
         if any(part in FORBIDDEN_PATH_PARTS for part in path.parts):
             errors.append(f"forbidden path present: {path.relative_to(ROOT)}")
 
