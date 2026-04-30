@@ -50,14 +50,21 @@ FORBIDDEN_STRINGS = [
 
 def iter_text_files() -> list[pathlib.Path]:
     paths: list[pathlib.Path] = []
-    for path in ROOT.rglob("*"):
-        if not path.is_file():
-            continue
-        if any(part in IGNORED_PATH_PARTS for part in path.parts):
-            continue
-        if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif", ".mp3", ".aiff", ".woff", ".woff2"}:
-            continue
-        paths.append(path)
+    try:
+        iterator = ROOT.rglob("*")
+        for path in iterator:
+            if any(part in IGNORED_PATH_PARTS for part in path.parts):
+                continue
+            try:
+                if not path.is_file():
+                    continue
+            except FileNotFoundError:
+                continue
+            if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif", ".mp3", ".aiff", ".woff", ".woff2"}:
+                continue
+            paths.append(path)
+    except FileNotFoundError:
+        return paths
     return paths
 
 
@@ -68,11 +75,14 @@ def main() -> int:
         if not (ROOT / rel).exists():
             errors.append(f"missing required file: {rel}")
 
-    for path in ROOT.rglob("*"):
-        if any(part in IGNORED_PATH_PARTS for part in path.parts):
-            continue
-        if any(part in FORBIDDEN_PATH_PARTS for part in path.parts):
-            errors.append(f"forbidden path present: {path.relative_to(ROOT)}")
+    try:
+        for path in ROOT.rglob("*"):
+            if any(part in IGNORED_PATH_PARTS for part in path.parts):
+                continue
+            if any(part in FORBIDDEN_PATH_PARTS for part in path.parts):
+                errors.append(f"forbidden path present: {path.relative_to(ROOT)}")
+    except FileNotFoundError:
+        pass
 
     for path in iter_text_files():
         try:

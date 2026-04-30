@@ -195,12 +195,13 @@ The original private working project contains a broader test surface. This publi
 - real frontend/backend implementation slices for reviewer inspection.
 
 ## Verification
-Useful local checks for the public showcase slice:
+Useful local checks for a fresh clone of the public showcase slice:
 
 ```bash
 python3 scripts/audit_publication_readiness.py
+python3 -m pip --disable-pip-version-check install -r backend/requirements.txt
 python3 -m pytest backend/tests -q
-cd frontend && npm install && npm run typecheck
+cd frontend && npm ci --no-audit --no-fund && npm run typecheck
 ```
 
 ## License
