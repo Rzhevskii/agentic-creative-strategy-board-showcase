@@ -107,7 +107,7 @@ function isStoryBlock(value: unknown): value is StoryBlock {
   switch (value.type) {
     case "narrative_text":
       return isNonEmptyString(value.body);
-    case "source_collage":
+    case "screenshot_group":
       return (
         Array.isArray(value.items) &&
         value.items.length > 0 &&
@@ -115,7 +115,7 @@ function isStoryBlock(value: unknown): value is StoryBlock {
           (item) => isRecord(item) && isString(item.itemId) && isNonEmptyString(item.sourceId)
         )
       );
-    case "generated_image":
+    case "image_asset":
       return isNonEmptyString(value.imagePath) && isNonEmptyString(value.alt);
     case "audio_clip":
       return isNonEmptyString(value.audioPath);

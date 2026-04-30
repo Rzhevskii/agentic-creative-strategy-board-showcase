@@ -126,7 +126,7 @@
           "blockId": { "type": "string", "minLength": 1 },
           "type": {
             "type": "string",
-            "enum": ["narrative_text", "source_collage", "generated_image", "audio_clip", "strategy_callout", "citation_callout"]
+            "enum": ["narrative_text", "screenshot_group", "image_asset", "audio_clip", "strategy_callout", "citation_callout"]
           }
         },
         "additionalProperties": true

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
-  <rect width="1200" height="700" fill="#f8fafc"/>
-  <rect x="40" y="40" width="1120" height="80" rx="20" fill="#e2e8f0"/>
-  <rect x="40" y="150" width="520" height="500" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="590" y="150" width="570" height="150" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="590" y="320" width="270" height="330" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="890" y="320" width="270" height="330" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="600" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#0f172a">Placeholder Board UI</text>
-</svg>

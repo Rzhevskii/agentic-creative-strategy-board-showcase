@@ -1,6 +1,6 @@
 # Showcase Assets
 
-This folder contains lightweight SVG placeholders plus real submission screenshots under `screenshots/`.
+This folder contains real submission screenshots under `screenshots/`.
 
 Current screenshots:
 
@@ -10,4 +10,4 @@ Current screenshots:
 4. `screenshots/04-terminal-sse-lifecycle-proof.png` — terminal SSE lifecycle proof.
 5. `screenshots/05-terminal-backend-tests-passed.png` — backend test proof.
 
-The SVG placeholders remain in place so documentation links and demo references stay stable even when screenshots are updated.
+The previous SVG placeholder files were removed after the real screenshots were added.

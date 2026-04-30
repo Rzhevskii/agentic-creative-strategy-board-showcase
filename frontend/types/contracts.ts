@@ -81,8 +81,8 @@ export type StoryBlockBase = {
   blockId: string;
   type:
     | "narrative_text"
-    | "source_collage"
-    | "generated_image"
+    | "screenshot_group"
+    | "image_asset"
     | "audio_clip"
     | "strategy_callout"
     | "citation_callout";
@@ -96,8 +96,8 @@ export type NarrativeTextBlock = StoryBlockBase & {
   body: string;
 };
 
-export type SourceCollageBlock = StoryBlockBase & {
-  type: "source_collage";
+export type ScreenshotGroupBlock = StoryBlockBase & {
+  type: "screenshot_group";
   items: Array<{
     itemId: string;
     sourceId: string;
@@ -108,12 +108,11 @@ export type SourceCollageBlock = StoryBlockBase & {
   }>;
 };
 
-export type GeneratedImageBlock = StoryBlockBase & {
-  type: "generated_image";
+export type ImageAssetBlock = StoryBlockBase & {
+  type: "image_asset";
   imagePath: string;
   alt: string;
-  promptSummary?: string;
-  generationModel?: string;
+  caption?: string;
 };
 
 export type AudioClipBlock = StoryBlockBase & {
@@ -136,8 +135,8 @@ export type CitationCalloutBlock = StoryBlockBase & {
 
 export type StoryBlock =
   | NarrativeTextBlock
-  | SourceCollageBlock
-  | GeneratedImageBlock
+  | ScreenshotGroupBlock
+  | ImageAssetBlock
   | AudioClipBlock
   | StrategyCalloutBlock
   | CitationCalloutBlock;

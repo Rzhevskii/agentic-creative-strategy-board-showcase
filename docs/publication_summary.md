@@ -74,18 +74,13 @@ This showcase repo was created fresh. No original-repo files were modified as pa
 - README explicitly states that this repository is a **public showcase layer**, not the full private repo mirror.
 
 ### Screenshots
-- Real screenshots were **not added automatically** in this verification pass.
-- Placeholder assets remain in `docs/assets/`.
-- Real screenshots are still recommended for stronger reviewer credibility before public push.
+- Real screenshots were added under `docs/assets/screenshots/`.
+- Placeholder SVG assets were removed after fixture/example references were updated.
 
 ### Remaining risks
-- The repo is publishable as proof material, but it will look stronger with real screenshots replacing the placeholders.
-- The repository still has no commit history yet; an initial commit is required before any push.
+- The repo is a sanitized showcase layer, not a mirror of the full private working repository.
 
 ### Publish recommendation
-**Recommended status: publish after small fixes.**
+**Recommended status: published-ready.**
 
-The showcase repository is currently safe and structurally convincing as a sanitized public WIP MVP. The remaining manual polish is:
-1. add real screenshots;
-2. create the initial commit;
-3. push only this showcase repository, not the original private working repo.
+The showcase repository is safe and structurally convincing as a sanitized public WIP MVP proof layer.

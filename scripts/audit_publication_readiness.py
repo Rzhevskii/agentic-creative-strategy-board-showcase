@@ -28,9 +28,13 @@ FORBIDDEN_PATH_PARTS = [
     ".sisyphus",
     "logs",
     ".env.local",
+]
+
+IGNORED_PATH_PARTS = {
+    ".git",
     ".next",
     "node_modules",
-]
+}
 
 FORBIDDEN_STRINGS = [
     "-".join(["gemini", "creative", "agent", "490117"]),
@@ -49,7 +53,7 @@ def iter_text_files() -> list[pathlib.Path]:
     for path in ROOT.rglob("*"):
         if not path.is_file():
             continue
-        if ".git" in path.parts:
+        if any(part in IGNORED_PATH_PARTS for part in path.parts):
             continue
         if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif", ".mp3", ".aiff", ".woff", ".woff2"}:
             continue
@@ -65,7 +69,7 @@ def main() -> int:
             errors.append(f"missing required file: {rel}")
 
     for path in ROOT.rglob("*"):
-        if ".git" in path.parts:
+        if any(part in IGNORED_PATH_PARTS for part in path.parts):
             continue
         if any(part in FORBIDDEN_PATH_PARTS for part in path.parts):
             errors.append(f"forbidden path present: {path.relative_to(ROOT)}")

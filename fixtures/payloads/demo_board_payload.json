@@ -9,10 +9,10 @@
     "targetNiche": "Creative strategy support for startup operators"
   },
   "sources": [
-    {"sourceId": "src_alpha", "title": "Source Alpha", "url": "https://alpha.example.com/product", "domain": "alpha.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S1"},
-    {"sourceId": "src_bravo", "title": "Source Bravo", "url": "https://bravo.example.com/product", "domain": "bravo.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S2"},
-    {"sourceId": "src_charlie", "title": "Source Charlie", "url": "https://charlie.example.com/product", "domain": "charlie.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S3"},
-    {"sourceId": "src_delta", "title": "Source Delta", "url": "https://delta.example.com/product", "domain": "delta.example.com", "screenshotPath": "docs/assets/placeholder-source-card.svg", "citationLabel": "S4"},
+    {"sourceId": "src_alpha", "title": "Source Alpha", "url": "https://alpha.example.com/product", "domain": "alpha.example.com", "screenshotPath": null, "citationLabel": "S1"},
+    {"sourceId": "src_bravo", "title": "Source Bravo", "url": "https://bravo.example.com/product", "domain": "bravo.example.com", "screenshotPath": null, "citationLabel": "S2"},
+    {"sourceId": "src_charlie", "title": "Source Charlie", "url": "https://charlie.example.com/product", "domain": "charlie.example.com", "screenshotPath": null, "citationLabel": "S3"},
+    {"sourceId": "src_delta", "title": "Source Delta", "url": "https://delta.example.com/product", "domain": "delta.example.com", "screenshotPath": null, "citationLabel": "S4"},
     {"sourceId": "src_echo", "title": "Source Echo", "url": "https://echo.example.com/article", "domain": "echo.example.com", "screenshotPath": null, "citationLabel": "S5"}
   ],
   "patternClusters": [
@@ -40,9 +40,9 @@
   },
   "storyBlocks": [
     {"blockId": "sb_opening", "type": "narrative_text", "title": "Market pulse", "body": "The sampled market repeats the same promise cluster: fast recap, autopilot assistance, and workflow confidence.", "citationSourceIds": ["src_alpha", "src_bravo", "src_charlie"]},
-    {"blockId": "sb_collage", "type": "source_collage", "title": "What users see first", "items": [{"itemId": "collage_1", "sourceId": "src_alpha", "title": "Source Alpha", "imagePath": "docs/assets/placeholder-source-card.svg", "caption": "Fast recap framing", "citationLabel": "S1"}, {"itemId": "collage_2", "sourceId": "src_bravo", "title": "Source Bravo", "imagePath": "docs/assets/placeholder-source-card.svg", "caption": "Autopilot assistant framing", "citationLabel": "S2"}]},
+    {"blockId": "sb_screenshot_group", "type": "screenshot_group", "title": "What users see first", "items": [{"itemId": "item_1", "sourceId": "src_alpha", "title": "Structured brief intake", "imagePath": "docs/assets/screenshots/01-ui-structured-brief-intake.png", "caption": "Fast strategy intake framing", "citationLabel": "S1"}, {"itemId": "item_2", "sourceId": "src_bravo", "title": "Completed strategy board", "imagePath": "docs/assets/screenshots/03-ui-result-creative-story-board.png", "caption": "Board-first output framing", "citationLabel": "S2"}]},
     {"blockId": "sb_strategy", "type": "strategy_callout", "title": "Strongest opening", "label": "Differentiate on decision clarity", "body": "The most defensible next test is to focus on what survives the meeting, not just what gets summarized.", "citationSourceIds": ["src_alpha", "src_bravo", "src_echo"]},
-    {"blockId": "sb_generated_image", "type": "generated_image", "title": "Concept frame", "imagePath": "docs/assets/placeholder-concept-frame.svg", "alt": "Editorial concept frame placeholder", "promptSummary": "decision clarity after founder meeting chaos", "generationModel": "mimo-eval-placeholder"},
-    {"blockId": "sb_audio", "type": "audio_clip", "title": "Optional recap placeholder", "audioPath": "docs/assets/placeholder-demo-payload.svg", "transcript": "Optional audio recap placeholder for showcase-only review."}
+    {"blockId": "sb_image_asset", "type": "image_asset", "title": "Concept frame", "imagePath": "docs/assets/screenshots/02-ui-filled-brief-example.png", "alt": "Filled strategy brief example", "caption": "decision clarity after founder meeting chaos"},
+    {"blockId": "sb_evidence", "type": "citation_callout", "title": "Evidence note", "claim": "The public showcase uses sanitized example sources and real local demo screenshots for proof material.", "supportingSourceIds": ["src_alpha", "src_bravo", "src_echo"]}
   ]
 }

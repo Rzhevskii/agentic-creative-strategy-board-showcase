@@ -13,7 +13,7 @@ function renderBlock(block: StoryBlock, sourcesById: Map<string, Source>) {
   switch (block.type) {
     case "narrative_text":
       return <p style={{ margin: 0, lineHeight: 1.7, color: "#334155" }}>{block.body}</p>;
-    case "source_collage":
+    case "screenshot_group":
       return (
         <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}>
           {block.items.map((item) => {
@@ -52,12 +52,12 @@ function renderBlock(block: StoryBlock, sourcesById: Map<string, Source>) {
           </div>
         </div>
       );
-    case "generated_image": {
+    case "image_asset": {
       const imagePath = resolveAssetPath(block.imagePath);
       return (
         <div style={{ display: "grid", gap: 12 }}>
           {imagePath ? <img alt={block.alt} src={imagePath} style={{ width: "100%", borderRadius: 16 }} /> : null}
-          <p style={{ margin: 0, color: "#475569", lineHeight: 1.6 }}>{block.promptSummary ?? block.alt}</p>
+          {block.caption || block.alt ? <p style={{ margin: 0, color: "#475569", lineHeight: 1.6 }}>{block.caption ?? block.alt}</p> : null}
         </div>
       );
     }
@@ -72,6 +72,15 @@ function renderBlock(block: StoryBlock, sourcesById: Map<string, Source>) {
       return null;
   }
 }
+
+const BLOCK_TYPE_LABELS: Record<StoryBlock["type"], string> = {
+  narrative_text: "Narrative Text",
+  screenshot_group: "Screenshot Group",
+  image_asset: "Image Asset",
+  audio_clip: "Audio Clip",
+  strategy_callout: "Strategy Callout",
+  citation_callout: "Citation Callout",
+};
 
 export function StoryLayerRenderer({
   storyBlocks,
@@ -95,7 +104,7 @@ export function StoryLayerRenderer({
         {storyBlocks.map((block) => (
           <article key={block.blockId} style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 20, padding: 20, display: "grid", gap: 14 }}>
             <div style={{ display: "grid", gap: 6 }}>
-              <p style={{ margin: 0, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.12em", color: "#64748b" }}>{block.type}</p>
+              <p style={{ margin: 0, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.12em", color: "#64748b" }}>{BLOCK_TYPE_LABELS[block.type]}</p>
               {block.title ? <h3 style={{ margin: 0, fontSize: 22 }}>{block.title}</h3> : null}
               {block.description ? <p style={{ margin: 0, color: "#475569", lineHeight: 1.6 }}>{block.description}</p> : null}
             </div>
